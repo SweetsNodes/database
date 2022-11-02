@@ -1,5 +1,5 @@
 ## SweetsNodes Database
-Simple json database for NodeJS
+Simple database for NodeJS
 
 ## Getting started
 ```js
