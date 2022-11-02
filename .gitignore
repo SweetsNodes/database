@@ -2,4 +2,4 @@ node_modules/
 lib/
 test/
 
-sweets.db.json
+sweets.db.*

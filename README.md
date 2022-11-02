@@ -3,15 +3,16 @@ Simple database for NodeJS
 
 ## Getting started
 ```js
-const SweetsDB = require("@sweetsnodes/database").default;
-/* import SweetsDB from "@sweetsnodes/database"; */
+const { Database } = require("@sweetsnodes/database");
+/* import { Databass } from "@sweetsnodes/database"; */
 
-let Database = new SweetsDB();
+let db = new Database();
+/* let db = new Database("mydatabase.json"); */
 
-Database.set("hello", "hi");
-Database.get("hello"); /* hi */
-Database.has("hello"); /* true */
-Database.delete("hello");
-Database.has("hello"); /* false */
-Database.get("hello"); /* undefined */
+db.set("hello", "hi");
+db.get("hello"); /* hi */
+db.has("hello"); /* true */
+db.delete("hello");
+db.has("hello"); /* false */
+db.get("hello"); /* undefined */
 ```

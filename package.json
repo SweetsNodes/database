@@ -1,6 +1,6 @@
 {
   "name": "@sweetsnodes/database",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Simple json database for NodeJS",
   "main": "lib/index.js",
   "directories": {
