@@ -1,0 +1,32 @@
+{
+  "name": "@sweetsnodes/database",
+  "version": "1.0.0",
+  "description": "Simple json database for NodeJS",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SweetsNodes/database.git"
+  },
+  "keywords": [
+    "Database",
+    "JSON"
+  ],
+  "author": "Jirayu Srisawat",
+  "license": "MIT",
+  "types": "./lib/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/SweetsNodes/database/issues"
+  },
+  "homepage": "https://github.com/SweetsNodes/database#readme"
+}
