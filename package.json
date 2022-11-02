@@ -10,7 +10,9 @@
   "dependencies": {
     "fs": "^0.0.1-security"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  },
   "scripts": {
     "test": "node test/index.js"
   },

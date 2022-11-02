@@ -1,19 +1,24 @@
 import fs from "fs";
 
 class SweetsDB {
-  public storage = {};
+  public path: string = null;
+  public storage: any = {};
 
-  public constructor() {
+  public constructor(path?: string) {
+    if (path) {
+      this.path = path;
+    } else this.path = "sweetsnodes.db";
+
     let stats;
     try {
-      stats = fs.statSync("sweets.db.json");
+      stats = fs.statSync(this.path);
     } catch (e) {
       if (e.code === "ENOENT") return;
       throw e;
     }
 
     try {
-      fs.accessSync("sweets.db.json", fs.constants.R_OK | fs.constants.W_OK);
+      fs.accessSync(this.path, fs.constants.R_OK | fs.constants.W_OK);
     } catch (e) {
       throw e;
     }
@@ -21,7 +26,7 @@ class SweetsDB {
     if (stats.size > 0) {
       let data;
       try {
-        data = fs.readFileSync("sweets.db.json");
+        data = fs.readFileSync(this.path);
       } catch (e) {
         throw e;
       }
@@ -60,7 +65,7 @@ class SweetsDB {
 
   public sync() {
     try {
-      fs.writeFileSync("sweets.db.json", JSON.stringify(this.storage, null, 0));
+      fs.writeFileSync(this.path, JSON.stringify(this.storage, null, 0));
     } catch (e) {
       throw e;
     }
