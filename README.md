@@ -4,7 +4,7 @@ Simple database for NodeJS
 ## Getting started
 ```js
 const { Database } = require("@sweetsnodes/database");
-/* import { Databass } from "@sweetsnodes/database"; */
+/* import { Database } from "@sweetsnodes/database"; */
 
 let db = new Database();
 /* let db = new Database("mydatabase.json"); */
