@@ -65,6 +65,19 @@ export class Database {
     return this;
   }
 
+  public getAll(): any[] {
+    let data = [];
+
+    for (let key in this.storage) {
+      data.push({
+        key: key,
+        value: this.get(key),
+      });
+    }
+
+    return data;
+  }
+
   public sync(): boolean {
     try {
       fs.writeFileSync(this.path, JSON.stringify(this.storage, null, 2));
